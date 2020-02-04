@@ -1,4 +1,5 @@
-.weatherHeader {
+
+.teamHeader {
     text-align: center;
     font: 50px;
     background: darkslategray;
@@ -8,7 +9,7 @@
 }
 
 
-.searchHistory {
+/* .searchHistory {
     background: #eeeeee;
     margin: 0px 250px 0px 0px;
 
@@ -41,7 +42,7 @@
 
 .dayfive {
     background: lightblue;
-}
+} */ */
 
 /* .welcome {
     text-align: center;
