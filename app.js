@@ -1,4 +1,5 @@
 var inquirer = require("inquirer");
+var fs = require('fs');
 var Employee = require('./lib/Employee');
 var Manager = require('./lib/Manager');
 var Engineer = require('./lib/Engineer');
@@ -72,13 +73,24 @@ inquirer.prompt([
         const engineer = new Engineer(response.engineerName, response.engineerID, response.engineerEmail, response.engineerGithub)
         const intern = new Intern(response.internName, response.internID, response.internEmail, response.internSchool)
 
+        const team = [manager, engineer, intern];
+        const json = JSON.stringify(team);
+        fs.writeFile('team.json', json, 'utf8', function(err){
+
+            if (err) {
+              return console.log(err);
+            }
+          
+            console.log('success');
+          
+          });
+
         console.log(manager);
         console.log(engineer);
         console.log(intern);
+        console.log(team);
 
-
-
-
+        
     });
     
     
